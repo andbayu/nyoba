@@ -9,5 +9,19 @@
 <body>
    <h1>Ayis subagyo</h1>
    <p>saya adalah ayis subagyo makanan saya kedelai</p>
+   <table>
+   <thead>
+    <tr>
+        <th>asasa</th>
+        <th>huhu</th>
+        <th>wkwkw</th>
+    </tr>
+   </thead>
+   <tbody>
+        <td>jaja</td>
+        <td>laaa</td>
+        <td>ahh</td>
+   </tbody>
+   </table>
 </body>
 </html>
