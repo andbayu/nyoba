@@ -29,7 +29,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Blank Page</h1>
+            <h1>Admin</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -73,17 +73,9 @@
 <script src="{{asset ('plugins/datatables/jquery.dataTables.js')}}"></script>
 <script src="{{asset ('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
 <script>
-        $(function () {
-          $("#example1").DataTable();
-          $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-          });
-        });
+      $(document).ready(function() {
+    $('#example').DataTable();
+} );
 </script>
 </body>
 </html>
