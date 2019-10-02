@@ -59,9 +59,11 @@ class PendudukController extends Controller
      * @param  \App\Penduduk  $penduduk
      * @return \Illuminate\Http\Response
      */
-    public function edit(Penduduk $penduduk)
+    public function edit( $id)
     {
         //
+        $pdd = Penduduk::find($id);
+        return view('admin.edit',compact('pdd'));
     }
 
     /**
@@ -71,9 +73,14 @@ class PendudukController extends Controller
      * @param  \App\Penduduk  $penduduk
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Penduduk $penduduk)
+    public function update(Request $request, Penduduk $pdd,$id)
     {
-        //
+       $pdd = Penduduk::find($id);
+       $pdd->nama   = request('nama');
+       $pdd->nik    = request('nik');
+       $pdd->alamat = request('alamat');
+       $pdd->save();
+       return redirect('penduduk');
     }
 
     /**
@@ -82,8 +89,11 @@ class PendudukController extends Controller
      * @param  \App\Penduduk  $penduduk
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Penduduk $penduduk)
+    public function destroy($id)
     {
         //
+        // DB::table('penduduks')->delete($id);
+        DB::delete('delete from penduduks where id = ?',[$id]);
+        return redirect('penduduk');
     }
 }

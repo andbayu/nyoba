@@ -20,7 +20,8 @@
                     <th>Nama </th>
                     <th>Nik </th>
                     <th>Alamat</th>
-                    <th>Aksi</th>
+                    <th>Hapus</th>
+                    <th>Edit</th>
                   </tr>
               </thead>
             <tbody>
@@ -31,8 +32,20 @@
                     <td>{{$pdd->nama}}</td>
                     <td>{{$pdd->nik}}</td>
                     <td>{{$pdd->alamat}}</td>
-                    <td><a href="http://">Woi</a></td>
-                </tr>@endforeach
+                    <td style="width=30px;">
+                        <form action="{{ route('penduduk.destroy',$pdd->id)}}" method="post">
+                                @csrf
+                                @method('delete')
+                            <button class="btn btn-danger" type="submit">Hapus</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="{{ route('penduduk.edit',$pdd->id)}}">
+                                <input class="btn btn-primary" type="submit" value="Edit">
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
             </tbody>
             <tfoot>
                 <tr>
@@ -40,7 +53,8 @@
                     <th>Nama </th>
                     <th>Nik </th>
                     <th>Alamat</th>
-                    <th>Aksi</th>
+                    <th>Hapus</th>
+                    <th>Edit</th>
                 </tr>
             </tfoot>
           </table>
@@ -48,4 +62,7 @@
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
+          </div>
+        </div>
+</section>
 @endsection

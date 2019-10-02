@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="card-body">
-        cuy
+        cuy <a href="/penduduk">sini</a>
       </div>
       <!-- /.card-body -->
       <div class="card-footer">
