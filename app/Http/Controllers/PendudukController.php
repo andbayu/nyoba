@@ -16,9 +16,9 @@ class PendudukController extends Controller
     public function index()
     {
         //
-        $data = DB::select('select * from penduduks');
-
+        $data =  DB::select('CALL tampilListPenduduks()');
         return view('admin.penduduk',['penduduks'=>$data]);
+        // return response()->json($data);
     }
 
     /**

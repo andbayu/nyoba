@@ -13,6 +13,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
+                  <input class="btn btn-primary" type="button" value="+ Tambah">
           <table id="example" class="table table-striped table-bordered" style="width:100%">
               <thead>
                   <tr>
